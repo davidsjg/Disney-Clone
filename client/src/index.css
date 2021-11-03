@@ -1,4 +1,12 @@
 body {
   margin: 0;
-  color: white;
+  color: black;
+  /* background-color: #040714; */
 }
+
+/* .containerMain {
+  min-height: calc(100vh - 70px);
+  padding: 0 calc(3.5vw + 5px);
+  position: relative;
+  background-color: red;
+} */
