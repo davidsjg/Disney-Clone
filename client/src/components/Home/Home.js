@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import ImgSlider from "../ImgSlider/ImgSlider";
+import Viewers from "../Viewers/Viewers";
 
 function Home() {
   return (
     <Container>
       Home
       <ImgSlider />
+      <Viewers />
     </Container>
   );
 
