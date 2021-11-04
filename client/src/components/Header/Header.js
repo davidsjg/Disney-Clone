@@ -46,6 +46,9 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0 36px;
   color: white;
+  overflow-x: hidden;
+  box-shadow: rgb(0 0 0 / 5%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
 `;
 
 const Logo = styled.img`
