@@ -25,7 +25,9 @@ function Movies() {
 
 export default Movies;
 
-const Container = styled.div``;
+const Container = styled.div`
+  color: rgba(249, 249, 249, 0.8);
+`;
 
 const Content = styled.div`
   display: grid;
