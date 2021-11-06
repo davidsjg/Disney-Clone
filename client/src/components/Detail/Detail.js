@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { selectMovies } from "../../features/movie/movieSlice";
+import { useSelector } from "react-redux";
 
 function Detail() {
+  const movies = useSelector(selectMovies);
+
+  console.log(movies);
+
   return (
     <Container>
       <Background>
@@ -17,7 +23,7 @@ function Detail() {
         </PlayButton>
         <TrailerButton>
           <img src="/images/play-icon-white.png" />
-          <span>Trailer</span>
+          <span>{movies[0]}</span>
         </TrailerButton>
         <AddButton>
           <span>+</span>

@@ -9,14 +9,6 @@ import { useDispatch } from "react-redux";
 import { setMovies } from "../../features/movie/movieSlice";
 
 function Home() {
-  const dispatch = useDispatch();
-
-  let movies = ["Jaws", "The Shining", "Major League", "The Godfather"];
-
-  useEffect(() => {
-    dispatch(setMovies(movies));
-  }, []);
-
   return (
     <Container>
       <ImgSlider />
