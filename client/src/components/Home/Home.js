@@ -5,21 +5,16 @@ import ImgSlider from "../ImgSlider/ImgSlider";
 import Viewers from "../Viewers/Viewers";
 import Movies from "../Movies/Movies";
 import db from "../../firebase";
+import { useDispatch } from "react-redux";
+import { setMovies } from "../../features/movie/movieSlice";
 
 function Home() {
+  const dispatch = useDispatch();
+
+  let movies = ["Jaws", "The Shining", "Major League", "The Godfather"];
+
   useEffect(() => {
-    // db.collection("movies").onSnapshot((snapshot) => {
-    //   console.log(snapshot);
-    // });
-
-    getMovies(db);
-
-    async function getMovies(db) {
-      const moviesCol = collection(db, "movies");
-      const movieSnapshot = await getDocs(moviesCol);
-      const movieList = movieSnapshot.docs.map((doc) => doc.data());
-      return movieList;
-    }
+    dispatch(setMovies(movies));
   }, []);
 
   return (
