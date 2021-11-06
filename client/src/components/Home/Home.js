@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import { collection, getDocs } from "firebase/firestore/lite";
 import styled from "styled-components";
 import ImgSlider from "../ImgSlider/ImgSlider";
 import Viewers from "../Viewers/Viewers";
@@ -12,7 +12,14 @@ function Home() {
     //   console.log(snapshot);
     // });
 
-    console.log("SUP");
+    getMovies(db);
+
+    async function getMovies(db) {
+      const moviesCol = collection(db, "movies");
+      const movieSnapshot = await getDocs(moviesCol);
+      const movieList = movieSnapshot.docs.map((doc) => doc.data());
+      return movieList;
+    }
   }, []);
 
   return (
