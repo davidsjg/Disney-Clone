@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
 import styled from "styled-components";
 import ImgSlider from "../ImgSlider/ImgSlider";
 import Viewers from "../Viewers/Viewers";
 import Movies from "../Movies/Movies";
+import db from "../../firebase";
 
 function Home() {
+  useEffect(() => {
+    // db.collection("movies").onSnapshot((snapshot) => {
+    //   console.log(snapshot);
+    // });
+
+    console.log("SUP");
+  }, []);
+
   return (
     <Container>
       <ImgSlider />
