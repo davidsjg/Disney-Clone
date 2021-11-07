@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { selectMovies } from "../../features/movie/movieSlice";
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 
 function Detail() {
   const movies = useSelector(selectMovies);
 
-  console.log(movies);
+  const { movie } = useParams();
+  console.log(movie);
 
   return (
     <Container>
